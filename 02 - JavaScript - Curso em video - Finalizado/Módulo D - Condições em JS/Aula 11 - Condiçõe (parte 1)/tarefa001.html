@@ -1,0 +1,33 @@
+<!-- Fazer o ex009.js em HTML -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Você é Brasileiro?</h1>
+    Qual país você nasceu ? <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="nacionalidade()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function nacionalidade() {
+            var txtp = window.document.querySelector('input#txtpais')
+            var res = window.document.querySelector('div#res')
+            var pais = txtp.value //mesmo que o input pegue um texto, devo passar a string para uma variável
+
+            if (pais === 'Brasil') {
+                res.innerHTML = '<p>Você é <strong>BRASILEIRO !</strong></p>'
+            } else {
+                res.innerHTML = '<p>Você é estrangeiro.</p>'
+            }
+        }
+
+    </script>
+</body>
+</html>

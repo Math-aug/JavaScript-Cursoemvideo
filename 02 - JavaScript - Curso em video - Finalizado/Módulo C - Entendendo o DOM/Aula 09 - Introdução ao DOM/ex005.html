@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body{
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div class = "msg">Clique em mim</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1] //Escolhendo um parágrafo
+        p1.style.color = 'blue'
+        window.document.write('Está escrito assim: ' + p1.innerText + '<br/>') // Ele só pega o texto
+        window.document.write('Está escrito assim: ' + p1.innerHTML + '<br/>') // Ele puxa junto a formatação em HTML
+
+
+        /*
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
+        */
+
+        /*
+        var d = window.document.getElementsByName('msg')[0]
+        d.innerText = 'Olá'
+        */
+        
+        /*
+        var d = window.document.getElementsByClassName('msg')[0]
+        d.innerText = 'Bom dia!'
+        */
+
+        // var d = window.document.querySelector('div#msg') --> # usada para ID
+        var d = window.document.querySelector('div.msg')
+        d.style.background = 'white'
+
+
+    </script>
+</body>
+</html>
